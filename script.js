@@ -2,9 +2,10 @@
 document.addEventListener('DOMContentLoaded', function() {
     const output = document.getElementById('output');
     
-    const loadingRow = document.createElement('tr');
-    loadingRow.innerHTML = '<td colspan="2" class="text-center">Loading...</td>';
-    output.appendChild(loadingRow);
+const loadingRow = document.createElement('tr');
+loadingRow.id = 'loading';  // Add this line to give the row an ID
+loadingRow.innerHTML = '<td colspan="2" class="text-center">Loading...</td>';
+output.appendChild(loadingRow);
     
     const createPromise = (index) => {
         const delay = 1000 + Math.random() * 2000;
